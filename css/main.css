@@ -154,8 +154,8 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
-.main .aside > h3 {
-    font: 26px/36px Helvetica, Helvetica Neue, Arial;
+.main > aside > h3 {
+    font: 30px/36px Helvetica, Helvetica Neue, Arial;
 }
 
 
