@@ -1,0 +1,64 @@
+/* ==============
+    MOBILE: Main
+   ============== */
+   
+.header-container {
+}
+
+.footer-container {
+}
+
+.title {
+}
+
+.main {
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ==============
+    WIDE: Main
+   ============== */
+
+    .header-container {
+    }
+
+    .footer-container {
+    }
+
+    .title {
+    }
+
+    .main {
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .header-container {
+    }
+
+    .footer-container {
+    }
+
+    .title {
+    }
+
+    .main {
+    }
+	
+    .wrapper {
+    }
+}
