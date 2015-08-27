@@ -58,7 +58,7 @@ textarea {
 
 body {
     font: 16px/26px;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Exo', sans-serif;
 }
 
 .wrapper {
@@ -155,8 +155,10 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+
+
 .main > aside > h3 {
-    font: 30px/36px;
+    font: 30px/36px 'Exo:900';
 }
 
 
