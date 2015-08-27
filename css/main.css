@@ -181,7 +181,7 @@ body {
     top: 2em;
     font: 700 1em/1em 'RobotoDraft';
     color: white;
-    opacity: 87%;
+    opacity: .87;
 }
 
 .footer-container footer {
