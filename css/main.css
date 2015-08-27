@@ -57,13 +57,13 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px;
     font-family: 'Exo', sans-serif;
 }
 
 .wrapper {
     width: 90%;
     margin: 0 5%;
+    height: inherit;
 }
 
 /* ===================
@@ -71,18 +71,17 @@ body {
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #e44d26;
+    border-bottom: 20px solid rgba(71, 71, 85, .75);
 }
 
-.footer-container,
-.main aside {
-    border-top: 20px solid #e44d26;
+.footer-container {
+    border-top: 20px solid rgba(71, 71, 85, .75);
 }
 
 .header-container,
-.footer-container,
-.main aside {
-    background: #f16529;
+.footer-container {
+    background-color: rgba(241, 101, 41, .75);
+    
 }
 
 .title {
@@ -96,20 +95,21 @@ body {
 nav ul {
     margin: 0;
     padding: 0;
+    padding-top: 3em;
     list-style-type: none;
 }
 
 nav a {
     display: block;
     margin-bottom: 10px;
-    padding: 15px 0;
+    padding: 10px 10px;
 
     text-align: center;
     text-decoration: none;
     font-weight: bold;
 
     color: white;
-    background: #e44d26;
+    background-color: rgba(71, 71, 85, .75);
 }
 
 nav a:hover,
@@ -118,7 +118,7 @@ nav a:visited {
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* ==============
@@ -134,12 +134,10 @@ nav a:hover {
 }
 
 .main aside {
-    color: white;
     padding: 0px 5% 10px;
 }
 
 .footer-container footer {
-    color: white;
     padding: 20px 0;
 }
 
@@ -155,23 +153,62 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+.title {
+    font: italic 900 4em/1em 'Exo';
+    -webkit-text-fill-color: dimgrey; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
 
+body {
+    background-image: url("/img/body1.jpg");
+    background-color: azure;
+    background-blend-mode:exclusion;
+}
+
+.footer-container {
+    font: 400 1em/1em 'Exo' sans-serif;
+    -webkit-text-fill-color: dimgrey;
+}
+
+.main {
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(240, 255, 255, 0.80);
+    background-clip: padding-box;
+}
+
+.main p {
+    font: italic 400 1em/1.5em 'Exo';
+}
+
+.main > aside {
+    border-top: 20px solid rgba(71, 71, 85, .25);
+    background-color: rgba(241, 101, 41, .75);
+    -webkit-text-fill-color: dimgray;
+}
 
 .main > aside > h3 {
-    font: 30px/36px 'Exo:900';
+    position: relative;
+    padding: 0;
+    font: 700 2em/1em 'Exo';
+}
+
+nav a {
+    font: 400 1.5em/0em 'Exo';
+    back
 }
 
 
 
+/* ==========================================================================
+   All < 480px
+   ========================================================================== */
 
-
-
-
-
-
-
-
-
+.title {
+    text-align: center;
+    float: center;
+}
 
 /* ==========================================================================
    Media Queries
@@ -182,7 +219,7 @@ nav a:hover {
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
-
+    
     nav a {
         float: left;
         width: 27%;
@@ -218,7 +255,6 @@ nav a:hover {
     WIDE: CSS3 Effects
    ==================== */
 
-    .header-container,
     .main aside {
         -webkit-box-shadow: 0 5px 10px #aaa;
            -moz-box-shadow: 0 5px 10px #aaa;
