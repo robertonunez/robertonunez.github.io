@@ -71,20 +71,26 @@ body {
    =================== */
 
 .header-container {
-    border-bottom: 20px solid rgba(71, 71, 85, .75);
+    color: white;
 }
 
 .footer-container {
-    border-top: 20px solid rgba(71, 71, 85, .75);
+    color: white;
+}
+
+.main > aside {
+    color: black;
 }
 
 .header-container,
-.footer-container {
-    background-color: rgba(241, 101, 41, .75);
-    
+.footer-container,
+.main > aside {
+    background-color: #e64a19;
+    border-top: 20px solid rgba(0, 0, 0, .25);
 }
 
-.title {
+.title .text {
+    float: left;
     color: white;
 }
 
@@ -93,23 +99,23 @@ body {
    ============== */
 
 nav ul {
-    margin: 0;
+    position: relative;
+    margin: auto;
     padding: 0;
-    padding-top: 3em;
     list-style-type: none;
 }
 
 nav a {
     display: block;
     margin-bottom: 10px;
-    padding: 10px 10px;
+    padding: 15px;
 
     text-align: center;
     text-decoration: none;
     font-weight: bold;
 
     color: white;
-    background-color: rgba(71, 71, 85, .75);
+    background-color: rgba(0, 0, 0, .25);
 }
 
 nav a:hover,
@@ -138,75 +144,90 @@ nav a:hover {
 }
 
 .footer-container footer {
-    padding: 20px 0;
+    padding: 10px;
+    margin-bottom: auto;
 }
 
 /* ===============
     ALL: IE Fixes
    =============== */
 
-.ie7 .title {
+.ie7 .title .text {
     padding-top: 20px;
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Custom styles
    ========================================================================== */
 
-.title {
-    font: italic 900 4em/1em 'Exo';
-    -webkit-text-fill-color: dimgrey; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+.title .text {
+    font-family: 'RobotoDraft', sans-serif;
+    font: 700 4em/1em 'RobotoDraft';
+    opacity: .87;
 }
 
 body {
-    background-image: url("/img/body1.jpg");
-    background-color: azure;
-    background-blend-mode:exclusion;
+    background-color: #ECEFF1;
 }
 
-.footer-container {
-    font: 400 1em/1em 'Exo';
-    -webkit-text-fill-color: dimgrey;
+.mini {
+    font-family: 'RobotoDraft', sans-serif;
+    float: left;
+    position: relative;
 }
 
-.main {
-    margin: auto;
-    padding: 20px;
-    background-color: rgba(240, 255, 255, 0.80);
-    background-clip: padding-box;
+.title .mini.text {
+    position: relative;
+    top: 2em;
+    font: 700 1em/1em 'RobotoDraft';
+    color: white;
+    opacity: 87%;
+}
+
+.footer-container footer {
+    font-family: 'RobotoDraft', sans-serif;
+    font: 700 1em/1em 'RobotoDraft';
+    opacity: .87;
+}
+
+.main h1, h2{
+    opacity: .87
 }
 
 .main p {
-    font: 400 1em/1.5em 'Exo';
+    font: 1em/1.5em 'Exo';
 }
 
 .main > aside {
-    border-top: 20px solid rgba(71, 71, 85, .25);
-    background-color: rgba(241, 101, 41, .75);
-    -webkit-text-fill-color: dimgray;
+    color: white;
 }
 
 .main > aside > h3 {
     position: relative;
     padding: 0;
-    font: 700 2em/1em 'Exo';
+    font: 700 1.5em/1.5em 'Exo';
+    opacity: .87;
 }
 
-nav a {
-    font: 400 1.5em/0em 'Exo';
+.main > aside > p {
+    font: 1em/1.5em 'Exo';
+}
+
+nav .main-menu.item {
+    font-family: 'RobotoDraft', sans-serif;
+    font: 700 1.5em/1em 'RobotoDraft';
+    opacity: .87;
 }
 
 
 
 /* ==========================================================================
-   All < 480px
+   All min-width 479px
    ========================================================================== */
 
 .title {
+    display: inline-block;
     text-align: center;
-    float: center;
 }
 
 /* ==========================================================================
@@ -219,12 +240,15 @@ nav a {
     INTERMEDIATE: Menu
    ==================== */
     
+    nav .main-menu.item {
+        font: 700 1.25em/1em 'RobotoDraft';
+    }
+    
     nav a {
         float: left;
         width: 27%;
-        margin: 0 1.7%;
+        margin: 0px 1.7%;
         padding: 25px 2%;
-        margin-bottom: 0;
     }
 
     nav li:first-child a {
@@ -234,7 +258,17 @@ nav a {
     nav li:last-child a {
         margin-right: 0;
     }
-
+    
+    .title .mini.text {
+        position: relative;
+        top: 2em;
+        font: 700 1em/0em 'RobotoDraft';
+    }
+        
+    .title {
+        display: block;
+    }
+    
 /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
@@ -254,6 +288,8 @@ nav a {
     WIDE: CSS3 Effects
    ==================== */
 
+    .header-container,
+    .footer-container,
     .main aside {
         -webkit-box-shadow: 0 5px 10px #aaa;
            -moz-box-shadow: 0 5px 10px #aaa;
@@ -263,8 +299,8 @@ nav a {
 /* ============
     WIDE: Menu
    ============ */
-
-    .title {
+    
+    .title .text {
         float: left;
     }
 
@@ -286,6 +322,7 @@ nav a {
         float: right;
         width: 28%;
     }
+    
 }
 
 @media only screen and (min-width: 1140px) {
@@ -293,7 +330,10 @@ nav a {
 /* ===============
     Maximal Width
    =============== */
-
+    .main > aside > h3 {
+        font: 700 2em/1.5em 'Exo';
+    }
+    
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;

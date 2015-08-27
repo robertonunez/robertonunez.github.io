@@ -3,23 +3,54 @@
    ============== */
    
 .header-container {
+    background-image: url("/img/simple_stripe_pattern-782.jpg"),
+        linear-gradient(
+            to bottom,
+            rgba(230, 74, 25, 0),
+            rgba(0, 0, 0, .6) 20%
+        );
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
 }
 
 .footer-container {
+    background-image: url("/img/simple_stripe_pattern-782.jpg"),
+        linear-gradient(
+            to bottom,
+            rgba(230, 74, 25, 0),
+            rgba(0, 0, 0, .2)
+        );
+    background-position: bottom;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
 }
 
 .title {
 }
 
-.main {
+body {
 }
 
-/* ===============
-    ALL: IE Fixes
-   =============== */
+.main > aside {
+    background-image: url("/img/simple_stripe_pattern-782.jpg"),
+        linear-gradient(
+            to bottom,
+            rgba(230, 74, 25, 0),
+            rgba(0, 0, 0, .6) 50%
+        );
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    background-attachment: bottom;
+    background-position: left;
+}
 
-.ie7 .title {
-    padding-top: 20px;
+.create {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -38,6 +69,10 @@
     }
 
     .main {
+    }
+    
+    .create {
+    min-width: 100%; 
     }
 }
 
